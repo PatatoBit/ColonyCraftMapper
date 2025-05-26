@@ -49,7 +49,7 @@
 			return;
 		}
 		const { wx, wz } = pixelToWorld(px, py);
-		coordsDiv.textContent = `(${wx}, ${wz})`; // Removed pixel coordinates
+		coordsDiv.textContent = `${wx}, ${wz}`; // Removed pixel coordinates
 		coordsDiv.style.display = 'block';
 		coordsDiv.style.left = e.clientX - rect.left + 15 + 'px';
 		coordsDiv.style.top = e.clientY - rect.top + 15 + 'px';
@@ -91,7 +91,7 @@
 	<img
 		id="map"
 		bind:this={map}
-		src="/earth_map_labeled_1k.png"
+		src="/earth.png"
 		alt="Labeled Map"
 		on:mousemove={handleMouseMove}
 		on:mouseleave={handleMouseLeave}
